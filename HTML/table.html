@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        .table1{
+            border-color: rgb(20, 181, 20);
+        }
+    </style>
+  
+</head>
+<body>
+    <table border="2" class="table1">
+        <thead>
+            <th bgcolor="yellow">Sr. No</th>
+            <th bgcolor="yellow">Roll No</th>
+            <th bgcolor="yellow">Name</th>
+            <th bgcolor="yellow">Team</th>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td bgcolor="yellow">1</td>
+                <td>1001</td>
+                <td>John</td>
+                <td>Red</td>
+            </tr>
+            <tr>
+                <td bgcolor="yellow">2</td>
+                <td>1002</td>
+                <td>Peter</td>
+                <td>Blue</td>
+            </tr>
+            <tr>
+                <td bgcolor="yellow">3</td>
+                <td>1003</td>
+                <td>Henry</td>
+                <td>Green</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br> <hr> <br>
+
+    <table border="2" class="table2">
+        <thead>
+            <th>HEADER</th>
+            <th>HEADER</th>
+            <th>HEADER</th>
+            <th>HEADER</th>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td rowspan="4">span rows</td>
+                <td colspan="3" align="center">span columns</td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">span columns</td>
+                <td rowspan="3" align="center">span <br> both</td>
+            </tr>
+            <tr>
+                <td rowspan="2" align="center">span <br> rows</td>
+                <td>span column</td>
+            </tr>
+            <tr>
+                <td align="center">span <br> both</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
