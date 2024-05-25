@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #code{
+            width: 10%;
+        }
+    </style>
+</head>
+<body bgcolor="skyblue">
+    <form action="">
+        <!-- <label for="">first name</label>
+        <input type="text" name="" id=""> -->
+
+        <!-- using table to maintain format -->
+        <table>
+            <tr>
+                <td>First name</td>
+                <td><input type="text" name="" id="" maxlength="3" pattern="[A-Z a-z]"></td>
+            </tr>
+            <tr>
+                <td>middle name</td>
+                <td><input type="text" name="" id=""></td>
+            </tr>
+            <tr>
+                <td>last name</td>
+                <td><input type="text" name="" id=""></td>
+            </tr>
+            <tr>
+                <td>course</td>
+                <td>
+                    <select name="" id="">
+                        <option value="" hidden>SELECT YOUR COURSE</option>
+                        <option value="">BCA</option>
+                        <option value="">MCA</option>
+                        <option value="">MCOM</option>
+                        <option value="">BCOM</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" name="gender" id="">MALE
+                    <input type="radio" name="gender" id="">FEMALE
+                    <input type="radio" name="gender" id="">OTHER
+                </td>
+            </tr>
+            <tr>
+                <td>payment</td>
+                <td>
+                    <input type="radio" name="payment" id="">cash
+                    <input type="radio" name="payment" id="">card
+                    <input type="radio" name="payment" id="">UPI
+                </td>
+            </tr>
+            <tr>
+                <td>Phone:</td>
+                <td>
+                    <input type="text" name="" id="code" value="+91" >
+                    <input type="tel" name="" id="" pattern="[0-9]{10}">
+                </td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td>
+                    <textarea name="" id="" rows="5" cols="20"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>pincode</td>
+                <td><input type="number" name="" id="" min="6" max="6"></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td>
+                    <input type="email" name="" id="">
+                </td>
+            </tr>
+            <tr>
+                <td>DOB</td>
+                <td><input type="date" name="" id=""></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="" id=""></td>
+            </tr>
+            <tr>
+                <td>Hobby</td>
+                <td>
+                    <input type="checkbox" name="hobby" id="">singing
+                    <input type="checkbox" name="hobby" id="">dancing
+                    <input type="checkbox" name="hobby" id="">travelling
+                    <input type="checkbox" name="hobby" id="">eating
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="" id="" value="click me to submit data" >
+                    <input type="reset" name="" id="">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

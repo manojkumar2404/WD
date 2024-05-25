@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:rgb(64, 84, 196) ;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center"><u>STUDENT REGISTRATION FORM</u></h1>
+    <form action="">
+    <table>
+        <tr>
+            <td>FIRST NAME</td>
+            <td><input type="text" maxlength="30" pattern="[A-Z a-z]"></td>
+        </tr>
+        <tr>
+            <td>LAST NAME</td>
+            <td><input type="text" maxlength="30" pattern="[A-Z a-z]"></td>
+        </tr>
+        
+        <tr>
+            <td>DATE OF BIRTH</td>
+            <td>
+                <select name="" id="">
+                    <option value="" hidden>Day:</option>
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                </select>
+                <select name="" id="">
+                    <option value="" hidden>Month:</option>
+                    <option value="">January</option>
+                    <option value="">Febrary</option>
+                    <option value="">March</option>
+                    <option value="">April</option>
+                    <option value="">May</option>
+                </select>
+                <select name="" id="">
+                    <option value="" hidden>Year:</option>
+                    <option value="">2024</option>
+                    <option value="">2023</option>
+                    <option value="">2022</option>
+                    <option value="">2021</option>
+                    <option value="">2020</option>
+                </select>
+           </td>
+        </tr>
+
+        <tr>
+            <td>EMAIL ID</td>
+            <td><input type="email"></td>
+        </tr>
+        <tr>
+            <td>MOBILE NUMBER</td>
+            <td>
+                <input type="tel" name="" id="" pattern="[0-9]{10}">
+            </td>
+        </tr>
+
+        <tr>
+            <td>GENDER</td>
+            <td>
+                <input type="radio" name="gender">Male
+                <input type="radio" name="gender">Female
+            </td>
+        </tr>
+
+        <tr>
+            <td>ADDRESS</td>
+            <td><textarea name="" id="" rows="4" cols="20"></textarea></td>
+        </tr>
+
+        <tr>
+            <td>CITY</td>
+            <td><input type="text" maxlength="30" pattern="[A-Z a-z]"></td>
+        </tr>
+
+        <tr>
+            <td>PINCODE</td>
+            <td><input type="number" min="6" max="6"></td>
+        </tr>
+
+        <tr>
+            <td>STATE</td>
+            <td><input type="text" maxlength="30" pattern="[A-Z a-z]"></td>
+        </tr>
+        <tr>
+            <td>COUNTRY</td>
+            <td><input type="text" value="India"></td>
+        </tr>
+        <tr>
+            <td>HOBBIES</td>
+            <td>
+                <input type="checkbox">Drawing
+                <input type="checkbox">singing
+                <input type="checkbox">Sketching
+                <br>
+                <input type="checkbox">Others <input type="text">
+            </td>
+        </tr>
+        
+      
+        <table>
+            <t>QUALIFICATION</t>
+            <thead>
+                
+                <th>Sl.No.</th>
+                <th>Examination</th>
+                <th>Board</th>
+                <th>Percentage</th>
+                <th>Year of Passing</th>
+            </thead>
+          
+            <tbody>
+               
+                <tr>
+                    <td></td>
+                    <td>1</td>
+                    <td>Class X</td>
+                    <td><input type="text" maxlength="10" pattern="[A-Z a-z]"></td>
+                    <td><input type="number" min="2" max="2"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>2</td>
+                    <td>Class Xll</td>
+                    <td><input type="text" maxlength="10" pattern="[A-Z a-z]"></td>
+                    <td><input type="number" min="2" max="2"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>3</td>
+                    <td>Graduation</td>
+                    <td><input type="text" maxlength="10" pattern="[A-Z a-z]"></td>
+                    <td><input type="number" min="2" max="2"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>4</td>
+                    <td>Masters</td>
+                    <td><input type="text" maxlength="10" pattern="[A-Z a-z]"></td>
+                    <td><input type="number" min="2" max="2"></td>
+                    <td><input type="number"></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <tr>
+            <td>COURSES <br> APPLIED FOR</td>
+            <td>
+                <input type="radio">BCA
+                <input type="radio">B.Com
+                <input type="radio">B.Sc
+                <input type="radio">B.A
+
+            </td>
+        </tr>
+        <br><br>
+        <tr>
+            <td><input type="submit"></td>
+            <td><input type="reset"></td>
+        </tr>
+
+        
+    </table>
+    </form>
+</body>
+</html>
