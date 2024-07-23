@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        header{
+            border: 2px solid;
+            text-align: center;
+            background-color: blueviolet;
+            color: white;
+        }
+        .main{
+            height: 100px;
+            width: 99%;
+            /* border: 2px solid; */
+            color: white;
+            margin: 10px 10px;
+            display: flex;          
+
+    
+        }
+        .part1, .part2, .part3{
+            border: 2px solid;
+            height: 100px;
+            width: 100px;
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .part1{
+            background-color: cornflowerblue;
+            flex-grow: 1;
+        }
+        .part2{
+            background-color: yellowgreen; 
+            flex-grow: 4;              
+        }
+        .part3{
+            background-color: thistle;
+            flex-grow: 1;
+        }
+        footer{
+            border: 2px solid;
+            text-align: center;
+            background-color: blueviolet;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header><h2>HEADER</h2></header>
+    <div class="main">
+        <div class="part1">1</div>
+        <div class="part2">2</div>
+        <div class="part3">3</div>
+    </div>
+    <footer><h2>FOOTER</h2></footer>
+
+</body>
+</html>
