@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let str = "Manoj\"" //6   (\") = 1 character
+        console.log(str.length);
+        
+        let str1= "MANOJ PRAJAPAT"
+        console.log(str1.toLowerCase());
+        
+        let str3 = "Please give Rs 1000"
+        let amount = str3.slice("Please give Rs".length)
+        console.log(amount);
+        let amount1 = Number.parseInt(str3.slice(15))
+        console.log(amount1);
+        
+        let friend = "Lokesh"
+        friend[3] = "S"  
+        console.log(friend); // friend is not changed , because string is immutable
+        
+    </script>
+</body>
+</html>
