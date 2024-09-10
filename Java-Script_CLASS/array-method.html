@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // array Methods
+
+        let num = [1, 2, 3, 34, 4]
+
+        let a = num.toString() // array to string change
+        console.log(a ,typeof a);
+
+        let b = num.join("_")
+        let b1 = num.join(" and ")
+        console.log(b);
+        console.log(b1);
+
+//pop array
+        // num.pop()
+        // console.log(num); // last element pop
+
+        let c = num.pop() // pop return the popped element
+        console.log(num,c);
+
+//push array
+        let d = num.push(77) // push return the new array length
+        console.log(num, d);
+        
+        let e = num.shift() //first number pop and original array modify
+        console.log(e, num); 
+        
+        let e1 = num.unshift(98) //first number push and original array modify
+        console.log(e1, num);
+
+//delete array
+        let num1 = [1,2,3,4,5,6,7]
+        console.log(num1.length);
+        delete num1[0] //delete element in array 
+        console.log(num1);
+
+//concat array
+        let z = [11,22,33,44,55]
+        let z1 = [66,77,88,99]
+        let newArray = z.concat(z1)
+        console.log(newArray);
+        
+//sort method
+        let y = [33,22,16,5] //alphabetical short 
+        y.sort()
+        console.log(y);
+
+        let compare = (a,b)=>{
+            return a - b // ascending order sort the array
+            // return b - a //descending order sort the array
+        }
+        let x = [32,43,22,18,98,44]
+        x.sort(compare)
+        console.log(x);
+        
+        let w = [1,2,3,4,5]
+        w.reverse()
+        console.log(w);
+        
+//splice and slice
+        let v = [551,22,3,14,5,6,7,8,229]
+        v.splice(2,3,1021,1022,1023,1024,1025)
+        console.log(v);
+        //splice(2=position[index] to add, 3=no of element to remove,1021 1022 = element to be added )
+        //splice source array modify
+        
+        let v1 = v.slice(3)
+        console.log(v1);
+        //slice create a new array
+        
+    </script>
+</body>
+</html>
