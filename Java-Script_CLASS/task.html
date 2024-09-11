@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+//even - odd number
+        // let a = prompt("enter a number")
+        // let b = Number.parseInt(a)
+
+        // if(a % 2 == 0 ){
+        //     document.write(a," is even number")
+        // }else{
+        //     document.write(a," is odd number")
+        // }
+
+//1 to 10 number total
+        // let num = parseInt(prompt("enter how many number are add "))
+        // let sum = 0
+        // for(let i=1; i<=num; i++){
+        //     sum = sum + i;
+        // }
+        // document.write("the sum of ", num," number is ", sum)
+
+//prime number - which is divisible by 1 or the number itself
+//1,3,5,7,11    
+
+
+        let n = parseInt(prompt("Enter a number"))
+        function isPrime(n){
+            if (n<2){
+                return `${n} is not a prime number`
+            }
+            else{
+                for(let i=2; i<n; i++){
+                    if(n%i === 0){
+                        return `${n} is not a prime number`
+                    }
+                }
+                return `${n} is a prime number`
+            }
+        }
+        let k = document.write(isPrime(n))
+
+
+
+    </script>
+</body>
+</html>

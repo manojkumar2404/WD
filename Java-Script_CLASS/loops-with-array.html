@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let num = [3,54,1,2,4]
+        // for (let i=0; i<num.length; i++) {
+        //     console.log(num[i]);      
+        // }
+
+//forEach loop
+        num.forEach((Element)=>{
+            console.log(Element*Element);
+            
+        })
+
+//for...of
+for(let i of num){
+    console.log(i);
+    
+}
+
+//for...in
+for(let item in num){
+    console.log(num[item]);
+    
+}
+
+//array.from  =  it convert string into the array
+        let name = "manoj"
+        let arr = Array.from(name)
+        console.log(arr);
+        
+
+    </script>
+</body>
+</html>

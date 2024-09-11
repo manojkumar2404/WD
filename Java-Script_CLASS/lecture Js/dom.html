@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+        <form  method="get" name="login" onsubmit="display()">
+<!-- 
+          enter u r name <input type="text" name="fname"><br><br>
+
+          enter u r email <input type="email" name="uemail"><br><br> -->
+
+          enter u r password <input type="password" name="upassword"><br><br>
+          enter u r password <input type="password" name="cpassword"><br><br>
+
+          <input type="submit" value="ok">
+
+        </form>
+    <script>
+
+                     function display(){
+
+                    //  let n=  document.login.fname.value;
+
+                    //  let n1=  document.login.uemail.value;
+
+                    //  let n2=  document.login.upassword.value;
+
+                    //         alert(n + " "+ n1 + " "+ n2)
+                    let n3=  document.login.upassword.value;
+                    let n4=   document.login.cpassword.value;
+                    if(n3===n4){
+                        document.write("password matched")
+                    }
+                    else{
+                        document.write("password mis-matched")
+                    }
+                     }
+
+
+      /*
+
+        dom js  - hooks - html data get manipaltion document 
+          slow 
+      */
+
+
+    </script>
+</body>
+</html>
