@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+       /*
+
+          asyn and await 
+
+            process - 1 sync   2 asyn 
+
+            sync  - at a time single process allow, slow , safe 
+
+             process1 - 5sec 
+             2 - 2 sec
+             3 - 2sec //9sec 
+
+            asyn - at a time multiple process allow , fast, not safe 
+            
+             process1 - 5sec  
+             2 - 2 sec
+             3 - 2sec //5sec 
+
+             
+       */
+
+              async function xyz(){//process 1
+
+                await console.log("php")
+                   console.log("java")
+                    console.log("reactjs")
+                   console.log("nodejs")
+
+               }
+
+               console.log("python") //2
+                
+
+                   
+                console.log("dotnet")//3
+               xyz()
+
+               console.log("dotnet1")//3
+              
+
+    </script>
+</body>
+</html>
