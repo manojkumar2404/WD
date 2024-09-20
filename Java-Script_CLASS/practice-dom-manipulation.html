@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100%;
+            width: 100%;
+        }
+        *{ margin: 0;
+            padding: 0;
+        }
+        nav {
+            display: flex;
+            background-color: thistle;
+        }
+        nav li{
+            list-style: none;
+            padding: 0 23px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        
+            <li>Home</li>
+            <li>About</li>
+            <li>Blog</li>
+            <li>Contect</li>
+        
+    </nav>
+
+    <table>
+        <td>hello</td>
+        <tr>hello1</tr>
+        <tr>hello2</tr>
+        <tr>hello3</tr>
+        <tr>hello4</tr>
+    </table>
+    <script>
+       document.getElementsByTagName("nav")[0].firstElementChild.style.color = "red"
+       
+       document.getElementsByTagName("nav")[0].lastElementChild.style.color = "green"
+        
+
+    </script>
+</body>
+</html>

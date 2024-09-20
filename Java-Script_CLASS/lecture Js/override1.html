@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*program to create a class called Employee with methods called work() and getSalary(). Create a subclass called HRManager that overrides the work() method and adds a new method called addEmployee().*/
+
+    class Employee {
+        constructor(name, salary){
+            this.name = name;
+            this.salary = salary;
+         }
+
+        work(){
+            return `${this.name}`;
+         }
+
+        getSalary(){
+            return this.salary;
+        }
+    }
+
+class HrManager extends Employee {
+  constructor(name, salary){
+    super(name, salary);
+  }
+  addEmploye(employeName){
+    console.log(`new employee: ${employeName}`);
+  }
+}
+
+let e = new HrManager("Manoj ", 30000);
+console.log(e.work()); 
+console.log(e.getSalary()); 
+e.addEmploye("Anil "); 
+    </script>
+</body>
+</html>
