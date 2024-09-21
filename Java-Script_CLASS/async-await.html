@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    async function weather() {
+        
+    
+         let delhiWeather = new Promise((resolve, reject)=>{
+            console.log("Promise is pending");
+            setTimeout(()=>{
+                resolve("27 Deg")
+            },3000)
+        })
+
+        let bangaloreWeather = new Promise((resolve, reject)=>{
+            console.log("Promise is pending");
+            setTimeout(()=>{
+                resolve("21 Deg")
+            })
+        },8000)
+
+        // delhiWeather.then(alert)
+        // bangaloreWeather.then(alert)
+        console.log("fetching Delhi weather please wait...");
+        let delhiw = await delhiWeather
+        console.log("fetched Delhi Weather: " + delhiw);
+
+        console.log("fetching Bangalore weather please wait...");
+        let bangaloreW = await bangaloreWeather
+        console.log("fetched Delhi Weather: " + bangaloreW);
+
+        return [delhiw, bangaloreW]
+    }
+    console.log("welcome to weather control room");
+    let a= weather()
+    a.then((value)=>{
+        console.log(value);
+    })
+   
+
+        
+    </script>
+</body>
+</html>
