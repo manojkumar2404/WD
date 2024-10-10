@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//Write a JavaScript Program to display the current day and time in the following format. Sample Output: Today is Friday. Current Time is 12 PM: 12 : 22 2 ?
+
+function display() {
+  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  let a = new Date();
+  let day = days[a.getDay()];
+  let hours = a.getHours();
+  let minutes = a.getMinutes();
+  let seconds = a.getSeconds();
+
+  console.log(`Today is ${day}. Current Time is ${hours}: ${minutes} : ${seconds}`);
+}
+
+display();
+
+//Write a JavaScript program to get the current date?
+
+let m = new Date();
+console.log(m);
+    </script>
+</body>
+</html>

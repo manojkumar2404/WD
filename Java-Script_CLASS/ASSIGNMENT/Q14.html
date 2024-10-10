@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// Use console.log() and escape characters to print the following pattern in JS?
+
+    console.log(" 1\t 1\t 1\t 1\t 1\n 2\t 1\t 2\t 4\t 8\n 3\t 1\t 3\t 9\t 27\n 4\t 1\t 4\t 16\t 64\n 5\t 1\t 5\t 25\t 125");
+
+//pattern 1 =   1, 10, 101, 1010, 10101
+
+let n1 = 5;
+for (let i = 1; i <= n1; i++) {
+  let row1 = "";
+  for (let j = 1; j <= i; j++) {
+    row1 += (i + j) % 2 + " ";
+  }
+  console.log(row1);
+}
+
+
+//pattern 2 =  A, BC, DEF, GHIJ, KLMNO
+
+let alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+let counter = 0;
+for (let i = 0; i < 5; i++) {
+  let str = '';
+  for (let j = 0; j <= i; j++) {
+    str += alphabet[counter];
+    counter++;
+  }
+  console.log(str);
+}
+
+// Pattern 3 = 1, 23, 456, 78910, 11 12 13 14 15
+
+let num = 1;
+for (let i = 1; i <= 5; i++) {
+  let row2 = "";
+  for (let j = 1; j <= i; j++) {
+    row2 += num++ + " ";
+  }
+  console.log(row2);
+}
+
+// Pattern 4
+
+let n = 5;
+for (let i = 1; i <= n; i++) {
+  let row3 = "";
+  for (let j = 1; j <= i; j++) {
+    row3 += "* ";
+  }
+  console.log(row3);
+}
+
+
+
+    </script>
+</body>
+</html>

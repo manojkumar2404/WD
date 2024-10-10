@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 2px solid #ccc ;
+            width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            box-shadow: 10px 10px 10px lightgray;
+            background-color: floralwhite;
+        }
+        .container h2{
+            text-align: center;
+        }
+        .btn{
+            padding: 10px 20px;
+            margin: 10px 0;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="text"] {
+            width: 50px;
+            padding: 10px;
+            margin: 10px 10px;
+            border: 1px solid black;
+            
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Math Operation</h2>
+    <input type="number" id="first" placeholder="enter first number">
+
+    <select id="ope">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+
+    <input type="number" id="second" placeholder="enter second number"> <br><br>
+
+    <button class="btn" onclick="cal()">Calculate</button>
+
+    <input type="text" id="res" placeholder="result" readonly="">
+</div>
+
+
+<script>
+    function cal(){
+        let opr1 = document.getElementById("first").value
+        let opr2 = document.getElementById("second").value
+        let ope = document.getElementById("ope").value
+        
+        if(ope == '+'){
+            var res = parseInt(opr1) + parseInt(opr2)
+        }
+        if(ope == '-'){
+            var res = parseInt(opr1) - parseInt(opr2)
+        }
+        if(ope == '*'){
+            var res = parseInt(opr1) * parseInt(opr2)
+        }
+        if(ope == '/'){
+            var res = parseInt(opr1) / parseInt(opr2)
+        }
+
+         document.getElementById('res').value = res;
+       
+    }
+</script>
+</body>
+</html>

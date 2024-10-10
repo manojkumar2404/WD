@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marksheet</title>
+    <link rel="stylesheet">
+    <style>
+        .container{
+            border: 2px solid black;
+            width: 500px;
+            /* height: 350px; */
+            padding: 10px;
+        }
+        .container h2 {
+            text-align: center;
+            /* margin-bottom: 20px; */
+        }
+       .container table {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .container th, td {
+            text-align: left;
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+        #btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            margin-left: 260px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #btn:hover {
+            background-color: #45a049;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Marksheet for Information Technology</h2>
+    <form onsubmit="calculateResult(event)">
+        <table>
+            <tr>
+                <th>Subject</th>
+                <th>Enter Marks</th>
+            </tr>
+            <tr>
+                <td>1. C Language</td>
+                <td><input type="number" id="c-lang"></td>
+            </tr>
+            <tr>
+                <td>2. C++ Language</td>
+                <td><input type="number" id="c-plus"></td>
+            </tr>
+            <tr>
+                <td>3. Database</td>
+                <td><input type="number" id="database"></td>
+            </tr>
+            <tr>
+                <td>4. HTML</td>
+                <td><input type="number" id="html"></td>
+            </tr>
+            <tr>
+                <td>5. CSS</td>
+                <td><input type="number" id="css"></td>
+            </tr>
+            <tr>
+                <td>6. php</td>
+                <td><input type="number" id="php"></td>
+            </tr>
+            <tr>
+                <td>7. Core java</td>
+                <td><input type="number" id="java"></td>
+            </tr>
+        </table>
+        <button id="btn" type="submit">Result</button>
+        <div class="result">
+            <table>
+                <tr>
+                    <td>Total is:</td>
+                    <td><span id="total"></span></td>
+                </tr>
+                <tr>
+                    <td>Percentage is:</td>
+                    <td><span id="percent"></span></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+    </div>
+
+
+    <script>
+        function calculateResult(event) {
+            
+            event.preventDefault();
+
+            let a = parseInt(document.getElementById('c-lang').value);
+            let b = parseInt(document.getElementById('c-plus').value);
+            let c = parseInt(document.getElementById('database').value);
+            let d = parseInt(document.getElementById('html').value);
+            let e = parseInt(document.getElementById('css').value);
+            let f = parseInt(document.getElementById('php').value);
+            let g = parseInt(document.getElementById('java').value);
+
+            let totalMarks = a + b + c + d + e + f + g;
+            let maxMarks = 700;
+            let percentage = (totalMarks / maxMarks) * 100;
+
+            document.getElementById('total').innerHTML = `${totalMarks} / 700`;
+            document.getElementById('percent').innerHTML = `${percentage.toFixed(2)} %`;
+        }
+
+        //event.preventDefault(); prevents the page from reloading after form submission.
+
+    </script>
+</body>
+</html>
