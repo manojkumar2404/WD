@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        let a =fetch('https://api.escuelajs.co/api/v1/products')
+       
+        .then(response => response.json())
+        .then(json => console.log(json)) // resolve
+        .catch(error => console.log(error));
+
+
+
+        //map function(x, y) callback function
+        
+        let display = [20,30,40,50,60]
+        let b = display.map(function(val, index){
+            return {key:index , value:val*val}
+        })
+        console.log(b);
+</script>
+</body>
+</html>
