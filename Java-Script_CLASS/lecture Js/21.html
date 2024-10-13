@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+class registration {
+
+
+regis(){
+    
+   document.write("name,email,pass,mobileno")
+}
+}
+
+class login extends registration {
+
+    log(){
+      document.write("login done")
+    }
+}
+
+ class addtocart extends login {
+
+        cart(){
+            document.write("cart done")
+        }
+ }
+  let n= new addtocart();
+    n.cart()
+    n.log()
+    n.regis()
+    </script>
+</body>
+</html>

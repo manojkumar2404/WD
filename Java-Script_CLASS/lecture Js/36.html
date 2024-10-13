@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <form name="login" onsubmit="display()">
+
+  enter u r pass <input type="text" name="uname">
+ 
+
+  <input type="submit" value="ok">
+
+      </form>
+    <script>
+
+         function display(){
+
+            let a=document.login.uname.value;
+
+         
+
+           
+            if(a.length > 6){
+                alert("pass ok")
+            }else {
+                alert("pass not ok")
+            }
+          
+         }
+
+      /*
+
+        dom - document  object model
+
+            throw throws call apply bind - advance js 
+
+
+
+      */
+
+    </script>
+</body>
+</html>

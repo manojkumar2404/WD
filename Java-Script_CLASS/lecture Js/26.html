@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /*
+           this and super 
+
+
+
+        */
+
+         class xyz {
+
+              display(){
+
+                document.write("parent data")
+              }
+              display1(){
+
+document.write("parent1 data1")
+}
+         }
+
+         class abc extends xyz{
+
+            display(){
+
+      document.write("child data")
+}
+display1(){
+
+document.write("child1 data1")
+}
+
+               hello(){
+                this.display()//child
+                  super.display()//parent
+               }
+
+               hello1(){
+
+                this.display1()//child
+                  super.display1()//parent
+               }
+         }
+
+         let n= new abc();
+         n.hello()
+    </script>
+</body>
+</html>

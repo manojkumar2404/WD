@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// argument /parameter - not use directly 
+// this and super - 
+// this - current context 
+        class person {
+
+
+              constructor(name,age,country){
+
+                  this.name1=name;
+                  this.age1=age;
+                  this.country1=country;
+              }
+
+              display(){
+
+                console.log(`${this.name1}` )
+                console.log(`${this.age1}` )
+                console.log(`${this.country1}`)
+              }
+
+        }
+
+        let b= new person("rahul","25","india")
+        let b1= new person("yash","21","canada")
+        b.display()
+        b1.display()
+    </script>
+</body>
+</html>

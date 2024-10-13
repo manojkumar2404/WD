@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   /*
+    nested fun - fun inside fun\
+
+      closure 
+    
+      1 -  global variable use by outer fun , inner fun and both 
+       2-  outer fun var use by inner fun 
+   */
+               let n="reactjs";// global 
+
+        function xyz(){//outer fun
+
+                   let m="nodejs";
+                    document.write(n)//closure 
+
+               function mon(){//inner fun 
+
+                document.write(n)//closure 
+
+                document.write(m)//closure
+               }
+
+               mon()
+        }
+
+        xyz()
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /*
+             inheritance - 2 min 
+             1 parent
+             2 child - extends 
+             code reusebility 
+             code optimization 
+
+             types of inheritance
+
+
+             single - 1 parent and 1 child 
+             multiple - multiple parent and single child 
+             multilevel - props
+             heirarchical - 1 parent nd multiple child 
+             hybrid - combination of any 2 inheritance 
+
+                userdetail 
+
+                addtocart addtowishlist payment 
+
+                 product  addtocart addtowishlist
+                 authentication
+
+                 register - 5 
+
+                 login 
+        */
+
+        class registration {
+
+
+              regis(){
+                  //100 code
+                 document.write("name,email,pass,mobileno")
+              }
+        }
+
+        class login extends registration{
+
+                  log(){
+                    document.write("login done")
+                  }
+        }
+
+        let b= new login();
+        b.regis()
+        b.log()
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let c= parseInt(prompt("enter your balance amount"))
+        let c1= parseInt(prompt("enter your deposite amount"))
+        let c2= parseInt(prompt("enter your withdraw amount"))
+        class bankaccount {
+
+           constructor(acno,c){
+
+              this.x=c;
+       
+
+             // console.log(this.x)
+                
+           }
+
+           deposite(c1){
+           
+            this.x +=c1
+            console.log(this.x)
+
+           }
+
+           withdraw(c2){
+
+           this.x -=c2
+
+           console.log(this.x)
+           }
+
+        }
+
+        let b= new bankaccount("234",c);
+        b.deposite(c1)
+        b.withdraw(c2)
+    </script>
+</body>
+</html>

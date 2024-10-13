@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class bankaccount {
+
+           constructor(acno,balance){
+
+              this.acno=acno;
+              this.balance=balance;
+
+           }
+
+           deposite(d){
+           let n= this.balance += d;
+           console.log(n)
+           }
+
+           withdraw(s){
+
+            let n1= this.balance -= s;
+           console.log(n1)
+           }
+
+        }
+
+        let b= new bankaccount("234",1000);
+        b.deposite(500)
+        b.withdraw(300)
+    </script>
+</body>
+</html>

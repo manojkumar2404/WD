@@ -13,9 +13,9 @@
 
 
                 databinding                       dataexecution
- call             at a time                        at a time primitive data arguement
+ call             at a time                        at a time
  bind             at a time                          future 
- apply            at a time                          future  array non-primitive data arguement
+ apply            at a time                          at a time 
               data borrow 
 
               let v={
@@ -29,6 +29,20 @@
               }
               b.call(v)//data binding 
               let m=b.bind(v)
+
+
+                function abc(a,b,c ){
+
+
+                }
+
+                function mno(){
+
+
+                }
+                mno.call(abc,5,"HELLO",10)
+                let n=mno.bind(abc)
+                mno.apply(abc,[5,"HELLO",10])
 
 
      */

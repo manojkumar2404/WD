@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <p>h</p>
+   <p>h</p>
+   <p>h</p>
+   <h2>j</h2>
+   <h2>j</h2>
+
+   <button onclick="fstp()">p tag</button>
+   <button onclick="secondh()">h2 tag</button>
+    <script>
+
+       function fstp(){
+        let a = document.getElementsByTagName("p")
+       
+             alert("p tag no is" + " "+ a.length)
+       }
+
+       function secondh(){
+        let b= document.getElementsByTagName("h2");
+        alert("h2 tag no is" + " "+ b.length)
+
+       }
+
+    </script>
+</body>
+</html>

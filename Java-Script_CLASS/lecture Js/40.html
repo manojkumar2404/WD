@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*
+   break nd contious
+
+  
+*/
+               
+       for(let i=1; i<=10; i++){
+
+          if(i==6){
+           
+           //  break;
+            continue;
+          }
+
+        //  document.write(i)
+       }
+
+      // filter - more than 18
+          const age =[10,12,14,16,18,20,45,78,98,56]
+        
+           let b= age.filter(voting)
+
+           document.write("voters age:-" + " " +b[0] + " "+ "<BR>")
+           document.write("total no of voters:-" + " " +b.length)
+
+              function voting(age){
+
+                 return age >=18;
+              }
+             
+
+    </script>
+</body>
+</html>

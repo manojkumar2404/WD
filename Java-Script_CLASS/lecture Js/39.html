@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+     /*
+      call apply bind, function , datatype, concat,spread,rest, push pop
+      shift , unshift, dom vs vdom , client side and server side rendering, 
+      closure, hoisting, let var const ,  
+
+
+
+     */
+
+         function display(backend, database){
+
+             document.write(backend + " " + database + " "+ this.id + " "+this.description + " "+this.category)
+         }
+
+         let dt={
+
+            id: 1,
+        title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+        price: 109.95,
+        description: "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+        category: "men's clothing"
+         }
+
+
+   //   let m=   display.bind(dt,"node","oracle")
+
+        // m()
+         display.call(dt,"node","oracle")
+
+          //display.apply(dt,["node","oracle"])
+
+        //   document.write(dt.frontend);
+
+        // display("node","oracle")
+
+
+    </script>
+</body>
+</html>
