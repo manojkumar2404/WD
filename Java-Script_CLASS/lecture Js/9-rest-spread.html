@@ -15,7 +15,22 @@
                  ... - spread or rest 
          */
 
-             let v= ["hi",123,"hello", 789]
+// ... rest
+function addNumber(a,b,c,...other){
+    console.log(other);
+    return a+b+c
+}
+const res = addNumber(2,3,4,5,6,7,9)
+console.log(res);
+
+//... spread
+var names = ["manoj","anil","bhaskar"];
+
+function getNames(name1,name2,name3){
+    console.log(name1,name2,name3);
+}
+// getNames(names[0],names[1],names[2])
+getNames(...names)
 
 
              

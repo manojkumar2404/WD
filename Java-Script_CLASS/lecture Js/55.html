@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            process
+     1 sync - at a time 1 process execute /allow, slow, safe 
+
+         process1- 6sec
+         process2- 3 sec
+         process3 - 2sec //11 sec
+  2 async - at a time multiple process allow ,fast, less safe 
+
+              process1- 6sec    
+         process2- 3 sec
+         process3 - 2sec// 6sec 
+         await
+        */
+          
+                 let a=5;
+           async function display(){
+
+                 await console.log("reactjs")
+                  console.log("nodejs")//4
+                  await console.log("nextjs")
+                  console.log("java")
+                   console.log("php")
+             }//process1
+
+             console.log("dotnet1")//process3
+             display()
+
+             console.log("dotnet")//process3
+             console.log("python")//process2
+
+             console.log(a)
+    </script>
+</body>
+</html>

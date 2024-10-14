@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .product {
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+            display: inline-block;
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Product List</h1>
+    <div id="plist"></div>
+
+    <script>
+        const apidata = "https://fakestoreapi.com/products"; 
+
+        fetch(apidata)
+            .then(response => response.json())
+            .then(json => {
+                const pList = document.getElementById('plist');
+                const products = json.map(product => {
+                    return `
+                        <div class="product">
+                            <h2>${product.title}</h2>
+                            <img src="${product.image}" alt="${product.title}" style="width:100%">
+                            <p>Price: $${product.price}</p>
+                            <p>${product.description}</p>
+                        </div>
+                    `;
+                }).join(''); 
+                pList.innerHTML = products; 
+            })
+            .catch(error => console.log(error));
+    </script>
+
+</body>
+</html>

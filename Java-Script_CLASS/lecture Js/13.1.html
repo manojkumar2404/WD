@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person1 = {
+            Fname : "manoj",
+            Lname : "prajapat",
+            fullName : function (hometown, country){
+                return this.Fname+" "+this.Lname+" "+hometown+" "+country
+            }
+        }
+
+        const person2 = {
+            Fname : "Anil",
+            Lname : "kumar",
+        }
+
+console.log(person1.fullName.call(person2, "pune", "india"));
+
+console.log(person1.fullName.apply(person2, ["pune", "india"]));
+
+const res = console.log(person1.fullName.bind(person2, "pune", "india"));
+console.log(res);
+
+    </script>
+</body>
+</html>

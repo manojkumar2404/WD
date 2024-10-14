@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+    
+        table {
+            border-collapse: collapse;
+            margin: 150px auto;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        input[type="number"] {
+            width: 50px;
+        }
+        .img{
+            height: 60px;
+            border-radius: 50%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <table id="priceTable">
+        <tr>
+            <th>Product Info</th>
+            <th>Quantity</th>
+            <th>Price (per unit)</th>
+            <th>Price (subtotal)</th>
+        </tr>
+        <tr>
+            <td><img src="window-decor.jpeg" class="img"><br>Fortunata Window Hardware - Decorative Holdbacks - Mocha</td>
+            <td><input type="number" id="quantity1"  onchange="calculateSubtotal()"></td>
+            <td>290.99rs</td>
+            <td id="subtotal1"></td>
+        </tr>
+        <tr>
+            <td><img src="window-decor1.jpeg" class="img"><br>Woven Trellis Window Hardware - Clip Rings - Bronze</td>
+            <td><input type="number" id="quantity2"  onchange="calculateSubtotal()"></td>
+            <td>120.99rs</td>
+            <td id="subtotal2"></td>
+        </tr>
+        <tr>
+            <td colspan="3">Total</td>
+            <td id="total"></td>
+        </tr>
+    </table>
+
+    <script>
+        function calculateSubtotal() {
+            let quantity1 = document.getElementById("quantity1").value;
+            let quantity2 = document.getElementById("quantity2").value;
+
+            let price1 = 290.99;
+            let price2 = 120.99;
+
+            let subtotal1 = (quantity1 * price1).toFixed(2);
+            let subtotal2 = (quantity2 * price2).toFixed(2);
+
+            document.getElementById("subtotal1").innerHTML = `${subtotal1}rs`;
+            document.getElementById("subtotal2").innerHTML = `${subtotal2}rs`;
+
+            let total = (parseFloat(subtotal1) + parseFloat(subtotal2)).toFixed(2);
+            document.getElementById("total").innerHTML = `${total}rs`;
+    }
+
+    </script>
+</body>
+</html>
