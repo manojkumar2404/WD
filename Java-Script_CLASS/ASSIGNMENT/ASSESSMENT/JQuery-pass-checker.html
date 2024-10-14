@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Checker jQuery</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        input[type="password"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            width: 250px;
+        }
+        .strength-meter {
+            font-weight: bold;
+            padding: 6px 10px;
+            margin-left: 10px;
+            display: inline-block;
+            border-radius: 4px;
+        }
+        .weak {
+            background-color: #e57373;
+            color: white;
+        }
+        .medium {
+            background-color: #ffb74d;
+            color: white;
+        }
+        .strong {
+            background-color: #81c784;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Password Checker jQuery</h2>
+    <input type="password" id="password" placeholder="Enter your password">
+    <span id="strength" class="strength-meter">weak</span>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="passChecker.jquery.js"></script>
+
+</body>
+</html>
