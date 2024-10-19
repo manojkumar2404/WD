@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: teal;
+    }
+    .form-container {
+      width: 400px;
+      margin: 100px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: snow;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="text"],input[type="email"],input[type="password"],input[type="date"],select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+    }
+    .error {
+      color: red;
+      font-size: 12px;
+      margin-top: 5px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Form Validation</h2>
+
+    <form id="myForm">
+      <div class="form-group">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+        <div class="error" id="fullNameError"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <div class="error" id="emailError"></div>
+      </div>
+
+      <div class="form -group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        <div class="error" id="passwordError"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="dateOfBirth">Date of Birth:</label>
+        <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+        <div class="error" id="dateOfBirthError"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+          <option value="">Select a country</option>
+          <option value="USA">INDIA</option>
+          <option value="Canada">Canada</option>
+          <option value="UK">UK</option>
+        </select>
+        <div class="error" id="countryError"></div>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+    </div>
+
+    <script>
+      const form = document.getElementById('myForm');
+      const fullName = document.getElementById('fullName');
+      const email = document.getElementById('email');
+      const password = document.getElementById('password');
+      const dateOfBirth = document.getElementById('dateOfBirth');
+      const country = document.getElementById('country');
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        let isValid = true;
+
+        if (fullName.value.trim() === '') {
+          document.getElementById('fullNameError').innerHTML = 'Please enter your full name';
+          isValid = false;
+        }
+
+        if (email.value.trim() === '' || !validateEmail(email.value)) {
+          document.getElementById('emailError').innerHTML = 'Please enter a valid email address';
+          isValid = false;
+        }
+
+        if (password.value.trim() === '' || password.value.length < 8) {
+          document.getElementById('passwordError').innerHTML = 'Please enter a password with at least 8 characters';
+          isValid = false;
+        }
+
+        if (dateOfBirth.value === '') {
+          document.getElementById('dateOfBirthError').innerHTML = 'Please enter your date of birth';
+          isValid = false;
+        }
+
+        if (country.value === '') {
+          document.getElementById('countryError').innerHTML = 'Please select a country';
+          isValid = false;
+        }
+
+        if (isValid) {
+          alert('Form submitted successfully!');
+        }
+      });
+
+      function validateEmail(email) {
+        const emailCheck = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        return emailCheck.test(email);
+      }
+    </script>
+  </div>
+
+</body>
+</html>
