@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="myform" onsubmit="datapost()">
+      <input type="hidden" id="eid"  />
+      enter title : -<input type="text" id="title" /><br /><br />
+      enter price : -<input type="text" id="price" /><br /><br />
+      enter description : -<input type="text" id="description" /><br /><br />
+      enter category : -<input type="text" id="category" /><br /><br />
+      enter image : -<input type="text" id="image" /><br /><br />
+
+      <input type="submit" value="postdata" />
+    </form>
+    <table id="mytable" border="1px">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>title</th>
+          <th>price</th>
+          <th>description</th>
+          <th>category</th>
+          <th>image</th>
+          <th>action</th>
+        </tr>
+      </thead>
+      <tbody id="mytable"></tbody>
+    </table>
+
+    <script>
+      let api = "https://631f57da58a1c0fe9f670e23.mockapi.io/Myapi";
+
+        function datafetch(){
+      fetch(api)
+        .then((response) => response.json())
+        .then((json) => {
+          let n = document.querySelector("#mytable");
+          n.innerHTML='';
+
+          json.map((data) => {
+            let x = document.createElement("tr");
+
+            x.innerHTML = `
+                        <td>${data.id}</td>
+                        <td>${data.title}</td>
+                        <td>${data.price}</td>
+                        <td>${data.description}</td>
+                        <td>${data.category}</td>
+                        <td><img src=${data.image} width='40' height='50'></td>
+                        <td><button onclick="datadelete(${data.id})">delete</button>
+                          <button onclick="dataedit(${data.id})">edit</button> 
+                          </td>
+                      `;
+            n.appendChild(x);
+          });
+        })
+        .catch((error) => console.log(error));
+      }
+      function datapost() {
+        event.preventDefault();
+       let id= document.getElementById("eid").value
+        let mydata = {
+          
+          title: document.getElementById("title").value,
+          price: document.getElementById("price").value,
+          description: document.getElementById("description").value,
+          category: document.getElementById("category").value,
+          image: document.getElementById("image").value,
+        };
+
+         if(id) {
+          fetch(`${api}/${id}`, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(mydata)
+        })
+          .then((response) => response.json())
+          .then(() => {
+            datafetch();
+          })
+          .catch((error) => console.log(error));
+         }
+          else {
+
+        fetch(api, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(mydata)
+        })
+          .then((response) => response.json())
+          .then(() => {
+            datafetch();
+          })
+       
+
+          .catch((error) => console.log(error));
+        }
+      }
+
+             function datadelete(id){
+
+             
+              fetch(`${api}/${id}`, {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        
+        })
+          
+          .then(() => {
+
+            datafetch();
+          })
+
+          .catch((error) => console.log(error));
+
+             }
+
+             function dataedit(id){
+
+                   fetch(`${api}/${id}`)
+                   .then(response=> response.json())
+                   .then(data=>{
+
+                    document.getElementById("eid").value= data.id;
+                    document.getElementById("title").value=data.title;
+                    document.getElementById("price").value=data.price;
+                    document.getElementById("description").value=data.description;
+                    document.getElementById("category").value=data.category;
+                    document.getElementById("image").value=data.image;
+                   })
+             }
+          
+      datafetch()
+
+       
+    </script>
+  </body>
+</html>
